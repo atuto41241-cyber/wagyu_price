@@ -1,3 +1,4 @@
+
 body {
   background-color: #343a40;
 }
@@ -25,16 +26,35 @@ p {
   padding: 60px 20px 20px;
 }
 
+/* カード内の文字色 */
 .result a {
   color: #343a40;
 }
 
-@media screen and (min-width:576px) {
-  .row {
-    margin-bottom: 30px;
-  }
+/* カードのレイアウト */
+.result .row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0 0 30px;
 }
 
+/* カード本体 */
+.result .card {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  text-decoration: none;
+  color: #343a40;
+}
+
+/* カード画像 */
+.result .card-img-top {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
 
 .submit-color {
   background-color: #DE660D;
